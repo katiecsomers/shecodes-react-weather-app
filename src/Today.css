@@ -1,24 +1,24 @@
-.today {
+.today-square {
 	margin-top: 10px;
 	border-radius: 23%;
-	padding: 20px 20px;
+	padding: 20px;
 	box-shadow: -1px 1px 1px 1px grey;
+	text-align: center;
 }
 
 .faded {
 	font-size: small;
 	font-style: italic;
-	color: rgba(0, 0, 0, 0.3);
+	opacity: 0.4;
 	transition: none;
 }
-.today h1 {
+.today-square h1 {
 	font-size: 30px;
+	max-width: 60%;
 }
 
-#today-temps {
+.today-temps {
 	text-decoration: none;
-	color: black;
-	font-family: "Raleway", sans-serif;
 	font-size: 30px;
 }
 .today-details {
@@ -28,17 +28,10 @@
 	text-transform: capitalize;
 }
 
-img {
-	display: inline;
-	font-size: 100px;
+.today-icon {
+	width: 150px;
 	position: relative;
 	top: 30px;
-	left: 10px;
-}
-
-.forecast,
-.today {
-	text-align: center;
 }
 
 .farenheit-link,
@@ -50,17 +43,4 @@ img {
 }
 .inactive {
 	color: black;
-}
-.future h1 {
-	font-size: 20px;
-}
-
-.future {
-	margin-top: 10px;
-}
-.higher {
-	font-weight: 600;
-}
-.symbol {
-	font-size: 30px;
 }

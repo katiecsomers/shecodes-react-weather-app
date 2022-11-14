@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ReactLoading from "react-loading";
 
 import "./App.css";
 import Search from "./Search";
@@ -41,7 +42,15 @@ export default function App() {
 
 		return (
 			<div className="App loading">
-				<h1>Loading....</h1>;
+				<h1>
+					Loading....
+					<ReactLoading
+						type="bubbles"
+						color="purple"
+						height={667}
+						width={375}
+					/>
+				</h1>
 			</div>
 		);
 	}

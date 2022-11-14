@@ -1,0 +1,15 @@
+.Forecast h1 {
+	font-size: 20px;
+}
+
+.Forecast {
+	margin-top: 10px;
+	text-align: center;
+}
+.Forecast .higher {
+	font-weight: 600;
+}
+
+.Forecast img {
+	width: 50px;
+}

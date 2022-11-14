@@ -22,7 +22,7 @@ export default function Today(props) {
 	return (
 		<div>
 			<div className="row">
-				<div className="col-3 today">
+				<div className="col-md-3 today-square">
 					<div className="faded">Today in...</div>
 					<h1>{props.query.data.city}</h1>
 					<div className="faded">
@@ -30,7 +30,7 @@ export default function Today(props) {
 					</div>
 
 					<div>
-						<span id="today-temps">{temp}</span>
+						<span className="today-temps">{temp}</span>
 						<a
 							href="/"
 							className="celsius-link inactive"
@@ -47,15 +47,16 @@ export default function Today(props) {
 						</a>
 					</div>
 				</div>
-				<div className="col-3">
+				<div className="col-md-3">
 					<div>
 						<img
 							src={props.query.data.condition.icon_url}
 							alt={props.query.data.condition.icon}
+							className="today-icon"
 						/>
 					</div>
 				</div>
-				<div className="col-4 today-details">
+				<div className="col-md-4 today-details">
 					<ul>
 						<li>{props.query.data.condition.description}</li>
 						<li>Wind: {Math.round(props.query.data.wind.speed)}km/hr</li>
