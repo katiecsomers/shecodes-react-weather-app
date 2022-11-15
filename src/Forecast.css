@@ -13,3 +13,22 @@
 .Forecast img {
 	width: 50px;
 }
+
+@media (max-width: 800px) {
+	.Forecast h1 {
+		font-size: 30px;
+	}
+
+	.Forecast {
+		margin-top: 10px;
+		text-align: center;
+	}
+	.Forecast .higher {
+		font-weight: 600;
+	}
+
+	.Forecast img {
+		width: 80px;
+		border-bottom: 1px dashed grey;
+	}
+}

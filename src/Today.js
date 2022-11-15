@@ -7,22 +7,31 @@ export default function Today(props) {
 	const [temp, setTemp] = useState(
 		Math.round(props.query.data.temperature.current)
 	);
-	console.log(props.query);
+	const [units, setUnits] = useState("metric");
 
 	function convertFarenheit(event) {
 		event.preventDefault();
+
 		setTemp(Math.round(props.query.data.temperature.current * 1.8 + 32));
+		setUnits("imperial");
 	}
 
 	function convertCelsius(event) {
 		event.preventDefault();
+
 		setTemp(Math.round(props.query.data.temperature.current));
+		setUnits("metric");
+	}
+
+	function sendForecast() {
+		let url = `https://api.shecodes.io/weather/v1/forecast?query=${props.query.data.city}&units=${units}&key=cd43b254add990tdecc360830of5f05d`;
+		return url;
 	}
 
 	return (
 		<div>
-			<div className="row">
-				<div className="col-md-3 today-square">
+			<div className="row Today">
+				<div className="col-lg-3 today-square">
 					<div className="faded">Today in...</div>
 					<h1>{props.query.data.city}</h1>
 					<div className="faded">
@@ -33,7 +42,7 @@ export default function Today(props) {
 						<span className="today-temps">{temp}</span>
 						<a
 							href="/"
-							className="celsius-link inactive"
+							className="celsius-link "
 							onClick={convertCelsius}
 						>
 							°C |{" "}
@@ -47,7 +56,7 @@ export default function Today(props) {
 						</a>
 					</div>
 				</div>
-				<div className="col-md-3">
+				<div className="col-lg-3">
 					<div>
 						<img
 							src={props.query.data.condition.icon_url}
@@ -56,7 +65,7 @@ export default function Today(props) {
 						/>
 					</div>
 				</div>
-				<div className="col-md-4 today-details">
+				<div className="col-lg-4 today-details">
 					<ul>
 						<li>{props.query.data.condition.description}</li>
 						<li>Wind: {Math.round(props.query.data.wind.speed)}km/hr</li>
@@ -66,7 +75,7 @@ export default function Today(props) {
 					</ul>
 				</div>
 			</div>
-			<Forecast city={props.query.data.city} />
+			<Forecast url={sendForecast()} />
 		</div>
 	);
 }

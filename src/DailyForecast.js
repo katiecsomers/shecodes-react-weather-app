@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function DailyForecast(props) {
-	console.log(props.forecast);
 	function maxTemp() {
 		return Math.round(props.forecast.temperature.maximum);
 	}

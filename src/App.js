@@ -18,14 +18,22 @@ export default function App() {
 					<Search onQuery={setQuery} />
 				</div>
 				<footer>
+					This project was coded by{" "}
+					<a
+						href="https://legendary-squirrel-36425c.netlify.app/"
+						target={"_blank"}
+						rel={"noreferrer"}
+					>
+						Katie C Somers
+					</a>{" "}
+					and is{" "}
 					<a
 						href="https://github.com/katiecsomers/shecodes-react-weather-app"
 						target={"_blank"}
 						rel={"noreferrer"}
 					>
-						Open source{" "}
+						open source.
 					</a>
-					coding by Katie C Somers
 				</footer>
 			</div>
 		);

@@ -1,4 +1,4 @@
-.today-square {
+.Today .today-square {
 	margin-top: 10px;
 	border-radius: 23%;
 	padding: 20px;
@@ -6,15 +6,14 @@
 	text-align: center;
 }
 
-.faded {
+.Today .faded {
 	font-size: small;
 	font-style: italic;
 	opacity: 0.4;
 	transition: none;
 }
-.today-square h1 {
+.Today h1 {
 	font-size: 30px;
-	max-width: 60%;
 }
 
 .today-temps {
@@ -40,7 +39,17 @@
 	top: -5px;
 	left: 2px;
 	text-decoration: none;
-}
-.inactive {
 	color: black;
+}
+
+@media (max-width: 800px) {
+	ul {
+		padding-left: 100px;
+	}
+
+	.today-icon {
+		width: 150px;
+		display: block;
+		margin: 0 auto;
+	}
 }
