@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Search({ onQuery }) {
 	function searchCity(event) {
 		event.preventDefault();
-		let city = event.target[0].value.toLowerCase().replace(/ /g, "");
+		let city = event.target[0].value;
 		getWeather(city);
 	}
 
